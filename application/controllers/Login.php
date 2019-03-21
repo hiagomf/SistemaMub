@@ -10,7 +10,9 @@ class Login extends CI_Controller {
 	}
 
 	public function validarLogin(){
-
-		echo "<script>alert('".$this->input->post('cpf')."');</script>";
+		$cpf = $this->input->post('cpf');
+		$data['nome'] = "Hiago Mendes";
+		$data['cargo'] = "Administrador";
+		$this->load->view('admDashboard', $data);	
 	}
 }
